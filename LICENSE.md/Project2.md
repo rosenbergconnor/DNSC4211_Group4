@@ -118,20 +118,15 @@ abline(Cost_per_Mile_C1, col="Black", lwd=1)
 abline(Cost_per_Mile_C2, col="Red", lwd=1)
 abline(Cost_per_Mile_C3, col="Green", lwd=1)
 
-with(courier, plot(courier$Cost~courier$Total_Time, ylab = "Cost", xlab = "Total Delivery Time", main = "Cost per Minute", col=courier$CourierName))
-abline(Cost_per_Minute_C1, col="Black", lwd=1)
-abline(Cost_per_Minute_C2, col="Red", lwd=1)
-abline(Cost_per_Minute_C3, col="Green", lwd=1)
-
 with(courier, plot(courier$Total_Time~courier$Mileage, ylab = "Total Delivery Time", xlab = "Milage", main = "Total Time per Mile", col=courier$CourierName))
 abline(totalMinutes_per_Mile_C1, col="Black", lwd=1)
 abline(totalMinutes_per_Mile_C2, col="Red", lwd=1)
 abline(totalMinutes_per_Mile_C3, col="Green", lwd=1)
 
 with(courier, plot(courier$`Delivery Time`~courier$Mileage, ylab = "Delivery Time", xlab = "Milage", main = "Delivery Time per Mile", col=courier$CourierName))
-abline(Minutes_per_Mile_C1, col="Black", lwd=1)
-abline(Minutes_per_Mile_C2, col="Red", lwd=1)
-abline(Minutes_per_Mile_C3, col="Green", lwd=1)
+abline(travelMinutes_per_Mile_C1, col="Black", lwd=1)
+abline(travelMinutes_per_Mile_C2, col="Red", lwd=1)
+abline(travelMinutes_per_Mile_C3, col="Green", lwd=1)
 
 ####################################3
 #Plotting Average Milage of the Company's couriers
