@@ -163,8 +163,9 @@ sd(C3$`Delivery Time`) #15.12
 
 ########################
 #1)Discount Pickup times becasue they have the same mean and close SDs
-#2)Looked at delivery time per mile and saw C3, Green, was significanly above C1 and C2 within the 30 mile range
-#Becasue of that we eliminated C3
+#2)Looked at delivery time per mile and saw that for delivery miles greater than about 10, C2, Red, was the quickest. At lower mileages, they were all pretty close
 #SD of the delivery time has C2, Red, at the lowest making it the most reliable
-#3)Looked at Cost per mile to compare C1, Black, and C2, Red, and saw that Red was cheeper than black at all points within the given range.
+#3)Looked at Cost per mile and saw red was cheaper than green and black at milages greater than about 10 miles
+# anything less than about 10 miles, red and green had relitivly similar proices
+#AS milage increases, the red and black costs will converge at about 30 miles. With deliveries less than 30 miles, Red will always be cheaper than black
 
