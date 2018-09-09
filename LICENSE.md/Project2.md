@@ -91,3 +91,22 @@ abline(Cost_per_Minute_C3, col="Green", lwd=1)
 summary(Cost_per_Minute_C3)
 anova(Cost_per_Minute_C3)
 
+print("Cost per Mile")
+print(Cost_per_Mile_C1$coefficients)
+print(Cost_per_Mile_C2$coefficients)
+print(Cost_per_Mile_C3$coefficients)
+
+print("Cost per Minute")
+print(Cost_per_Minute_C1$coefficients)
+print(Cost_per_Minute_C2$coefficients)
+print(Cost_per_Minute_C3$coefficients)
+
+print("Delivery Minutes per Mile")
+print(Minutes_per_Mile_C1$coefficients)
+print(Minutes_per_Mile_C2$coefficients)
+print(Minutes_per_Mile_C3$coefficients)
+
+print("TOtal Minutes per Mile")
+print(totalMinutes_per_Mile_C1$coefficients)
+print(totalMinutes_per_Mile_C2$coefficients)
+print(totalMinutes_per_Mile_C3$coefficients)
