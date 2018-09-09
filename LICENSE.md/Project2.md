@@ -132,7 +132,12 @@ hist(C3$`Pickup Time`,breaks=10,main="Histogram Plot of c3 Pickup Time",xlab="Pi
 mean(C3$`Pickup Time`) #15.18
 abline(v=mean(C3$`Pickup Time`),col="red",lwd=2) #Plotting the mean on the histogram
 
-#Standard Deviations 
+#Standard Deviations of Pickup Times
 sd(C1$`Pickup Time`) #6.45
 sd(C2$`Pickup Time`) #5.88
 sd(C3$`Pickup Time`) #4.79
+
+#Standard Deviations of Delivery Times
+sd(C1$`Delivery Time`) #16.09
+sd(C2$`Delivery Time`) #13.63
+sd(C3$`Delivery Time`) #15.12
