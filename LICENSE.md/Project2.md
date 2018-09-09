@@ -110,3 +110,29 @@ print("TOtal Minutes per Mile")
 print(totalMinutes_per_Mile_C1$coefficients)
 print(totalMinutes_per_Mile_C2$coefficients)
 print(totalMinutes_per_Mile_C3$coefficients)
+
+#Plotting Average Milage of the Company's couriers
+hist(courier$Mileage,breaks =10 ,main = "Histogram Plot of Mileage",xlab="Total Mileage",ylab = "Frequency",las=1,col="blue")
+mean(courier$Mileage) 
+abline(v=mean(courier$Mileage),col="red",lwd=2) #Plotting the mean on the histogram 
+
+#Histograms of Arrival Times of Each Courier Service 
+##C1##
+hist(C1$`Pickup Time`,breaks=10,main="Histogram Plot of c1 Pickup Time",xlab="Pickup Time",ylab="Frequency",las=1)
+mean(C1$`Pickup Time`) #15.52
+abline(v=mean(C1$`Pickup Time`),col="green",lwd=2) #Plotting the mean on the histogram 
+
+##C2##
+hist(C2$`Pickup Time`,breaks=10,main="Histogram Plot of c2 Pickup Time",xlab="Pickup Time",ylab="Frequency",las=1,col="red")
+mean(C2$`Pickup Time`) #15.4
+abline(v=mean(C2$`Pickup Time`),col="blue",lwd=2) #Plotting the mean on the histogram 
+
+##c3##
+hist(C3$`Pickup Time`,breaks=10,main="Histogram Plot of c3 Pickup Time",xlab="Pickup Time", ylab="Frequency",las=1,col="green")
+mean(C3$`Pickup Time`) #15.18
+abline(v=mean(C3$`Pickup Time`),col="red",lwd=2) #Plotting the mean on the histogram
+
+#Standard Deviations 
+sd(C1$`Pickup Time`) #6.45
+sd(C2$`Pickup Time`) #5.88
+sd(C3$`Pickup Time`) #4.79
