@@ -11,7 +11,7 @@ C1 = courier[which(courier$CourierName==1),]
 C2 = courier[which(courier$CourierName==2),]
 C3 = courier[which(courier$CourierName==3),]
 
-
+###########################
 #Cost per mile will be the slope of the lm line and the y int will be the flat rate.
 ###Looking at C1
 with(C1, plot(C1$Cost~C1$Mileage, ylab = "Cost", xlab = "Milage Travelled", main = "Cost per Mile of C1"))
@@ -90,7 +90,8 @@ Cost_per_Minute_C3 = lm(C3$Cost~C3$Total_Time)
 abline(Cost_per_Minute_C3, col="Green", lwd=1)
 summary(Cost_per_Minute_C3)
 anova(Cost_per_Minute_C3)
-
+#############################
+#Printing Coef.
 print("Cost per Mile")
 print(Cost_per_Mile_C1$coefficients)
 print(Cost_per_Mile_C2$coefficients)
@@ -110,7 +111,29 @@ print("TOtal Minutes per Mile")
 print(totalMinutes_per_Mile_C1$coefficients)
 print(totalMinutes_per_Mile_C2$coefficients)
 print(totalMinutes_per_Mile_C3$coefficients)
+############################
+#Combine Plots With LM lines
+with(C1, plot(courier$Cost~courier$Mileage, ylab = "Cost", xlab = "Milage Travelled", main = "Cost per Mile", col=courier$CourierName))
+abline(Cost_per_Mile_C1, col="Black", lwd=1)
+abline(Cost_per_Mile_C2, col="Red", lwd=1)
+abline(Cost_per_Mile_C3, col="Green", lwd=1)
 
+with(courier, plot(courier$Cost~courier$Total_Time, ylab = "Cost", xlab = "Total Delivery Time", main = "Cost per Minute", col=courier$CourierName))
+abline(Cost_per_Minute_C1, col="Black", lwd=1)
+abline(Cost_per_Minute_C2, col="Red", lwd=1)
+abline(Cost_per_Minute_C3, col="Green", lwd=1)
+
+with(courier, plot(courier$Total_Time~courier$Mileage, ylab = "Total Delivery Time", xlab = "Milage", main = "Total Time per Mile", col=courier$CourierName))
+abline(totalMinutes_per_Mile_C1, col="Black", lwd=1)
+abline(totalMinutes_per_Mile_C2, col="Red", lwd=1)
+abline(totalMinutes_per_Mile_C3, col="Green", lwd=1)
+
+with(courier, plot(courier$`Delivery Time`~courier$Mileage, ylab = "Delivery Time", xlab = "Milage", main = "Delivery Time per Mile", col=courier$CourierName))
+abline(Minutes_per_Mile_C1, col="Black", lwd=1)
+abline(Minutes_per_Mile_C2, col="Red", lwd=1)
+abline(Minutes_per_Mile_C3, col="Green", lwd=1)
+
+####################################3
 #Plotting Average Milage of the Company's couriers
 hist(courier$Mileage,breaks =10 ,main = "Histogram Plot of Mileage",xlab="Total Mileage",ylab = "Frequency",las=1,col="blue")
 mean(courier$Mileage) 
@@ -143,7 +166,7 @@ sd(C2$`Delivery Time`) #13.63
 sd(C3$`Delivery Time`) #15.12
 
 
-
+########################
 #1)Discount Pickup times becasue they have the same mean and close SDs
 #2)Looked at delivery time per mile and saw C3, Green, was significanly above C1 and C2 within the 30 mile range
 #Becasue of that we eliminated C3
